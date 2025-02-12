@@ -1,0 +1,3 @@
+﻿  ConsoleApplication5.cpp
+C:\Users\rpo923\Desktop\Рпм\guccim4n-Study-on-the-Development-of-software-modules\ConsoleApplication5\ConsoleApplication5.cpp(34,33): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  ConsoleApplication5.vcxproj -> C:\Users\rpo923\Desktop\Рпм\guccim4n-Study-on-the-Development-of-software-modules\ConsoleApplication5\x64\Debug\ConsoleApplication5.exe
