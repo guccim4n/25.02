@@ -91,17 +91,18 @@ public:
 	}
 	bool operator < (const Point& other)
 	{
-		return x < other.x;
-		return y < other.y;
-		return z < other.z;
+		this->x < other.x;
+		this->y < other.y;
+		this->z < other.z;
+		return 1;
 
 	}
 	bool operator > (const Point& other)
 	{
-
-		return x > other.x;
-		return y > other.y;
-		return z > other.z;
+		this->x > other.x;
+		this->y > other.y;
+		this->z > other.z;
+		return 1;
 	}
 	Point& operator ++ ()
 	{
@@ -127,19 +128,19 @@ int main()
 
 	Point c;
 
-	if (a < b) {
+	if (a.GetX() < b.GetX()) {
 		cout << "a < b" << endl;
 	}
-	if (a > b)
+	if (a.GetX() > b.GetX())
 	{ 
 		cout << "a > b" << endl;
 	}
 	a.operator++ ();
 	b.operator++ ();
-	cout << a.GetX() << endl;
-	cout << b.GetX() << endl;
+	cout << "чиссло x увеличенно в объекте a: " << a.GetX() << endl;
+	cout << "чиссло x увеличенно в объекте b: " << b.GetX() << endl;
 
 	c = a - b;
-	cout << c.GetX() << endl;
+	cout << "a - b = " << c.GetX() << endl;
 
 }
