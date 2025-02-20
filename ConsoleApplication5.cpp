@@ -94,7 +94,7 @@ public:
 		this->x < other.x;
 		this->y < other.y;
 		this->z < other.z;
-		return 1;
+		return ((this->x + this->y + this->z) < (other.x + other.y + other.z));
 
 	}
 	bool operator > (const Point& other)
@@ -102,7 +102,8 @@ public:
 		this->x > other.x;
 		this->y > other.y;
 		this->z > other.z;
-		return 1;
+		return ((this->x + this->y + this->z) > (other.x + other.y + other.z));
+
 	}
 	Point& operator ++ ()
 	{
@@ -128,15 +129,15 @@ int main()
 
 	Point c;
 
-	if (a.GetX() < b.GetX()) {
+	if (a < b) {
 		cout << "a < b" << endl;
 	}
-	if (a.GetX() > b.GetX())
+	else
 	{ 
 		cout << "a > b" << endl;
 	}
-	a.operator++ ();
-	b.operator++ ();
+	++a;
+	++b;
 	cout << "чиссло x увеличенно в объекте a: " << a.GetX() << endl;
 	cout << "чиссло x увеличенно в объекте b: " << b.GetX() << endl;
 
